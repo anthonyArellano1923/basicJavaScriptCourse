@@ -1,4 +1,6 @@
 const listElement = document.querySelector(".posts"); //Container section of cards.
+const fetchButton = document.querySelector("#available-posts button");
+
 
 function getHTTPInfo(method, url, data) {
   return fetch(url, {
@@ -41,5 +43,5 @@ async function fetchData() {
   }
 }
 
-fetchData()
+fetchButton.addEventListener("click", fetchData)
 
